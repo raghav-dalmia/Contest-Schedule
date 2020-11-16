@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android = "http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/drawer_settings"
+              android:icon="@drawable/ic_setting"
+              android:title="Settings"/>
+
+        <item android:id="@+id/drawer_refresh"
+              android:icon="@drawable/ic_baseline_refresh_24"
+              android:title="Refresh List"/>
+
+        <item android:id="@+id/drawer_shareUs"
+              android:icon="@drawable/ic_share"
+              android:title="Share Us"/>
+
+        <item android:id="@+id/drawer_developers"
+              android:icon="@drawable/ic_developers"
+              android:title="Developers"/>
+
+        <item android:id="@+id/drawer_suggestUs"
+              android:icon="@drawable/ic_message"
+              android:title="Suggest Me"/>
+
+    </group>
+
+</menu >

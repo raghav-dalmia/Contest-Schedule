@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              xmlns:app = "http://schemas.android.com/apk/res-auto"
+              xmlns:tools = "http://schemas.android.com/tools"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:orientation = "vertical"
+              tools:context = ".ui.browser_activity.BrowserActivity" >
+
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content" >
+
+
+      <androidx.appcompat.widget.Toolbar
+          android:id = "@+id/browserToolbar"
+          android:layout_width = "match_parent"
+          android:layout_height = "wrap_content"
+          android:background = "@color/actionBarColor"
+          app:title = "Browser"
+          app:titleTextColor = "@color/white" >
+
+
+      </androidx.appcompat.widget.Toolbar >
+
+    </com.google.android.material.appbar.AppBarLayout >
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id = "@+id/swipeRefreshBrowser"
+      android:layout_width = "match_parent"
+      android:layout_height = "match_parent" >
+
+  <WebView
+      android:id = "@+id/webView"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content" />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout >
+
+
+  </LinearLayout >
+

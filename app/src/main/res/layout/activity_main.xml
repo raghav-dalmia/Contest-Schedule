@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                       xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                       xmlns:tools = "http://schemas.android.com/tools"
+                                                       android:id = "@+id/swipeRefreshMain"
+                                                       android:layout_width = "match_parent"
+                                                       android:layout_height = "match_parent"
+                                                       tools:context = ".ui.main_activity.MainActivity" >
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id = "@+id/navDrawer"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        tools:openDrawer = "start" >
+
+        <LinearLayout
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id = "@+id/homeToolbar"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:background = "@color/actionBarColor"
+                android:title = "@string/app_name" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id = "@+id/tab_layout"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:background = "@color/actionBarColor"
+                app:tabIndicatorColor = "@color/white"
+                app:tabSelectedTextColor = "@color/white"
+                app:tabTextColor = "@color/white" >
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id = "@+id/view_pager"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent" />
+
+        </LinearLayout >
+
+        <com.google.android.material.navigation.NavigationView
+            android:id = "@+id/homeNavView"
+            android:layout_width = "wrap_content"
+            android:layout_height = "match_parent"
+            android:layout_gravity = "start"
+            app:headerLayout = "@layout/drawer_header"
+            app:menu = "@menu/home_drawer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout >
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout >

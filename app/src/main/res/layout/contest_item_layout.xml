@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                xmlns:app = "http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/background_border"
+                android:layout_margin="4dp"
+                android:id="@+id/contestItemLayout"
+                android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width = "match_parent"
+        android:layout_height = "60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/codeforces_logo"
+        android:contentDescription = "TODO" />
+    <TextView
+        android:id="@+id/contestTitle"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/logo"
+        android:text="Contest Title"
+        android:textSize="20sp"
+        android:textColor="#191818"
+        android:shadowColor="#A9302F2F"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A9302F2F"
+        android:layout_below="@id/contestTitle"/>
+
+    <LinearLayout
+        android:id="@+id/dateTimeLayout"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_below="@id/contestTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart = "true"
+        >
+
+        <LinearLayout
+            android:layout_width = "0dp"
+            android:layout_weight="1"
+            android:layout_height = "wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:text = "Start"
+                android:textColor = "@color/black"
+                android:textSize = "18sp" />
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text="Nov/12/2020"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text="7:35 PM"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width = "1dp"
+            android:layout_height = "75dp"
+            android:layout_marginStart = "4dp"
+            android:layout_marginLeft = "4dp"
+            android:layout_marginTop = "4dp"
+            android:background = "#A9302F2F" />
+
+        <LinearLayout
+            android:layout_width = "0dp"
+            android:layout_weight="1"
+            android:layout_height = "wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+
+            <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text="Finish"
+                android:layout_marginBottom="4dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/finishDate"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text="Nov/12/2020"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/finishTime"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text="7:35 PM"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A9302F2F"
+        android:layout_below="@id/dateTimeLayout"/>
+
+    <TextView
+        android:id="@+id/viewContestButton"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text="view contest »"
+        android:layout_below="@id/dateTimeLayout"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="#E60027FF"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        />
+
+</RelativeLayout >

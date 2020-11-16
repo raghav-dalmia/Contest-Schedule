@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              xmlns:tools = "http://schemas.android.com/tools"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              xmlns:app = "http://schemas.android.com/apk/res-auto"
+              android:orientation = "vertical"
+              android:scrollbars="vertical"
+              android:isScrollContainer="true"
+              tools:context = ".ui.setting_activity.SettingActivity" >
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content" >
+
+
+      <androidx.appcompat.widget.Toolbar
+          android:id = "@+id/settingToolbar"
+          android:layout_width = "match_parent"
+          android:layout_height = "wrap_content"
+          android:background = "@color/actionBarColor"
+          app:title = "Settings"
+          app:titleTextColor="@color/white">
+
+
+      </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout >
+
+  <LinearLayout
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:orientation = "vertical"
+      android:padding = "4dp" >
+
+      <TextView
+          android:layout_width = "wrap_content"
+          android:layout_height = "wrap_content"
+          android:text = "Subscriptions"
+          android:layout_margin = "6dp"
+          android:textSize = "24dp"
+          android:textStyle = "bold" />
+
+    <CheckBox
+        android:id = "@+id/setting_showCodeforces"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "10dp"
+        android:layout_marginLeft = "10dp"
+        android:text = "CodeForces"
+        android:textSize = "18dp"/>
+
+    <CheckBox
+        android:id = "@+id/setting_showCodechef"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "10dp"
+        android:layout_marginLeft = "10dp"
+        android:text = "CodeChef"
+        android:textSize = "18dp" />
+
+    <CheckBox
+        android:id = "@+id/setting_showAtcoder"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "10dp"
+        android:layout_marginLeft = "10dp"
+        android:text = "AtCoder"
+        android:textSize = "18dp" />
+
+<!--    <View-->
+<!--        android:layout_width = "match_parent"-->
+<!--        android:layout_height = "1dp"-->
+<!--        android:background = "#A9302F2F"/>-->
+
+  </LinearLayout >
+
+  <LinearLayout
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:orientation = "vertical"
+      android:padding = "4dp" >
+
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="Date-Time"
+        android:layout_margin = "6dp"
+        android:textSize = "24dp"
+        android:textStyle = "bold" />
+
+    <CheckBox
+      android:id="@+id/setting_24hrTimeFormat"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text="24-hr time format"
+      android:layout_marginStart = "10dp"
+      android:layout_marginLeft = "10dp"
+      android:textSize = "18dp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/setting_timeZoneParent"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+      android:layout_marginStart = "10dp"
+      android:layout_marginLeft = "10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginEnd="10dp"
+      android:hint="Time zone"
+      app:endIconMode="dropdown_menu">
+
+      <AutoCompleteTextView
+        android:id="@+id/setting_timeZone"
+          android:layout_width = "match_parent"
+          android:layout_height = "wrap_content"
+        android:inputType="none"
+        android:maxLines="1"
+        android:singleLine="true"
+          android:textSize="18dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <View-->
+<!--        android:layout_width = "match_parent"-->
+<!--        android:layout_height = "1dp"-->
+<!--        android:background = "#A9302F2F"-->
+<!--        android:layout_marginTop="6dp"/>-->
+
+  </LinearLayout >
+
+  <LinearLayout
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:orientation = "vertical"
+      android:padding = "4dp" >
+
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="Short Contest Duration"
+        android:layout_marginTop = "6dp"
+        android:layout_marginRight = "6dp"
+        android:layout_marginLeft = "6dp"
+        android:textSize = "24dp"
+        android:textStyle = "bold" />
+
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="6dp"
+        android:text="set maximum time duration (in minutes) of short contest so as to classify a contest."
+        android:textStyle="italic"
+        />
+
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/setting_label"
+          android:layout_width = "wrap_content"
+          android:layout_height = "wrap_content"
+        android:textSize="12dp"
+          android:text="210.0"
+          android:layout_gravity="right"
+          android:layout_marginRight="10dp"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/setting_shortContestDuration"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:valueFrom="1.0"
+        android:valueTo="300.0"
+        android:stepSize="1.0"
+        android:layout_marginStart = "10dp"
+        android:layout_marginLeft = "10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        app:labelBehavior="gone"
+        android:labelFor="@id/setting_label"/>
+
+      </LinearLayout>
+
+  </LinearLayout>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:layout_width = "wrap_content"
+      android:layout_height = "wrap_content"
+      android:text="Set Default"
+      android:layout_gravity="center_horizontal"
+      android:layout_margin="10dp"
+      android:padding="12dp"
+      android:onClick="setDefaultValues"
+      android:background="@drawable/custom_button"/>
+
+
+  </LinearLayout>
