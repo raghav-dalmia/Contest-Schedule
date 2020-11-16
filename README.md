@@ -1,6 +1,8 @@
 # Contest-Schedule
 The main purpose of this app is to make competitive programmers aware about coding contests. Currently, this app shows contests of [CodeForces](https://codeforces.com/), [CodeChef](https://www.codechef.com/) and [AtCoder](https://atcoder.jp/).
 
+You can download app from this [link](https://drive.google.com/file/d/1X0m52KVlXWxKuNqtWn93dQuJiaibrvuB/view?usp=sharing).
+
 ## Screenshots (User-Interface)
 
 | | |
