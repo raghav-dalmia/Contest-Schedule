@@ -31,8 +31,28 @@
       android:layout_width = "wrap_content"
       android:layout_height = "wrap_content"
       android:text="Raghav Dalmia"
-      android:textSize="24dp"
+      android:textSize="30dp"
       android:layout_margin="12dp"
       android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width = "100dp"
+        android:layout_height = "50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/linkedin_logo"
+        android:onClick="openLinkedIn"/>
+    <ImageView
+        android:layout_width = "100dp"
+        android:layout_height = "50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/github_logo"
+        android:onClick="openGitHub"/>
+
+    <ImageView
+        android:layout_width = "100dp"
+        android:layout_height = "50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/gmail_logo"
+        android:onClick="openGmail"/>
 
   </LinearLayout >

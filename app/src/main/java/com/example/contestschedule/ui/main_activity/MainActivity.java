@@ -28,6 +28,7 @@ import com.example.contestschedule.ui.developer_activity.DeveloperActivity;
 import com.example.contestschedule.ui.main_activity.adapter.ContestPagerAdapter;
 import com.example.contestschedule.ui.main_activity.fragments.ContestFragment;
 import com.example.contestschedule.ui.setting_activity.SettingActivity;
+import com.example.contestschedule.util.AppConstants;
 import com.example.contestschedule.util.Contest;
 import com.example.contestschedule.util.FetchContestUtil;
 import com.google.android.material.navigation.NavigationView;
@@ -95,6 +96,10 @@ public class MainActivity extends BasicActivity {
                         break;
                     case R.id.drawer_shareUs:
                         drawerLayout.closeDrawer( GravityCompat.START );
+                        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                        shareIntent.setType("text/plain");
+                        shareIntent.putExtra(Intent.EXTRA_TEXT, "Contest Schedule App\n" + AppConstants.appUrl );
+                        startActivity(Intent.createChooser(shareIntent, "Share..."));
                         break;
                     case R.id.drawer_refresh:
                         drawerLayout.closeDrawer( GravityCompat.START );
